@@ -10,13 +10,6 @@
   --card-border-color: #eeeeee;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: inherit;
-}
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -29,6 +22,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 .items {
   margin-top: 0;
   margin-bottom: 0;
@@ -38,13 +42,6 @@ body {
 }
 
 /* Site Header */
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
 
 .container.main-nav {
   display: flex;
@@ -251,30 +248,26 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  width: 270px;
-  padding-bottom: 30px;
-
   background-color: var(--primary-white-color);
-  text-align: center;
-}
-
-.team-list .name {
-  margin-top: 30px;
-}
-
-.name,
-.profession {
-  margin: 0;
-
   color: var(--primary-title-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  align-items: center;
+  text-align: center;
 }
 
-.team-list .profession {
+.box-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.name,
+.profession {
+  margin: 0;
+}
+
+.profession {
   margin-top: 10px;
 
   color: var(--primary-text-color);
@@ -309,8 +302,13 @@ body {
   letter-spacing: 0.03em;
 }
 
+.address-list .item:nth-child(n + 2) {
+  margin-top: 9px;
+}
+
 .address-list .link {
   color: var(--bottom-link-color);
+
   text-decoration: none;
 }
 
@@ -366,10 +364,6 @@ body {
 }
 
 .project-list .item {
-  box-sizing: border-box;
-  border: 1px solid var(--card-border-color);
-  max-width: 370px;
-  padding-bottom: 20px;
   margin-bottom: 30px;
 }
 
@@ -377,15 +371,21 @@ body {
   margin-bottom: 0;
 }
 
+.box-info {
+  box-sizing: border-box;
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
+  max-width: 370px;
+  padding: 20px 24px;
+}
+
 .project-list .link {
-  display: inline-block;
   text-decoration: none;
 }
 
 .project-list .name {
-  margin-top: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin: 0;
 
   font-weight: 700;
   font-size: 18px;
@@ -394,10 +394,7 @@ body {
 }
 
 .project-list .type {
-  margin-top: 4px;
-  margin-bottom: 0;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin: 4px 0 0 0;
 
   color: var(--primary-text-color);
 
