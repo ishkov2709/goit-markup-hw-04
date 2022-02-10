@@ -4,7 +4,8 @@
   --primary-text-color: #757575;
   --accent-color: #2196f3;
   --alternative-bg-color: #f5f4fa;
-  --hero-bg-color: #2f303a;
+  --hero-bg-color: #c4c4c4;
+  --footer-bg-color: #2f303a;
   --bottom-link-color: rgba(255, 255, 255, 0.6);
   --border-color: #ececec;
   --card-border-color: #eeeeee;
@@ -115,12 +116,41 @@ img {
   color: var(--accent-color);
 }
 
+.contact-list .item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-list .item:nth-child(1)::before {
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/mail.svg);
+}
+
+.contact-list .item:nth-child(2)::before {
+  content: '';
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/tel.svg);
+}
+
 /* Hero */
 
 .hero {
-  margin: 0;
+  max-width: 1600px;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 200px 0;
+
   background-color: var(--hero-bg-color);
+  background-image: radial-gradient(ellipse at center, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
 
   text-align: center;
   letter-spacing: 0.06em;
@@ -196,8 +226,34 @@ img {
   width: 270px;
 }
 
+.feature-list .item::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  background-color: var(--alternative-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feature-list .item:nth-child(1)::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.feature-list .item:nth-child(2)::before {
+  background-image: url(../images/clock.svg);
+}
+
+.feature-list .item:nth-child(3)::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.feature-list .item:nth-child(4)::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 .feature-list .subtitle {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 0;
 
   color: var(--primary-title-color);
@@ -258,8 +314,7 @@ img {
 }
 
 .box-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 
 .name,
@@ -280,7 +335,7 @@ img {
 .page-footer {
   padding: 60px 0;
 
-  background-color: var(--hero-bg-color);
+  background-color: var(--footer-bg-color);
   color: var(--primary-white-color);
 }
 
