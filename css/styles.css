@@ -23,6 +23,11 @@ body {
   letter-spacing: 0.03em;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
 }
@@ -31,20 +36,29 @@ img {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   margin: 0 auto;
 }
 
 .items {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
+}
+
+.link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 /* Site Header */
 
 .container.main-nav {
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -108,33 +122,22 @@ img {
 }
 
 .contact-list .link {
+  display: block;
+  padding: 0;
+  border: none;
   color: var(--primary-text-color);
+
+  outline: 1px solid red;
+}
+
+.icon-mail {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
 }
 
 .contact-list .link:hover,
 .contact-list .link:focus {
   color: var(--accent-color);
-}
-
-.contact-list .item {
-  display: inline-flex;
-  align-items: center;
-}
-
-.contact-list .item:nth-child(1)::before {
-  content: '';
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/mail.svg);
-}
-
-.contact-list .item:nth-child(2)::before {
-  content: '';
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../images/tel.svg);
 }
 
 /* Hero */
@@ -195,8 +198,6 @@ img {
 /* Преимущества компании */
 
 .container.main-cont {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .title {
@@ -226,32 +227,6 @@ img {
   width: 270px;
 }
 
-.feature-list .item::before {
-  display: block;
-  content: '';
-  width: 270px;
-  height: 120px;
-  background-color: var(--alternative-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.feature-list .item:nth-child(1)::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.feature-list .item:nth-child(2)::before {
-  background-image: url(../images/clock.svg);
-}
-
-.feature-list .item:nth-child(3)::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.feature-list .item:nth-child(4)::before {
-  background-image: url(../images/astronaut.svg);
-}
-
 .feature-list .subtitle {
   margin-top: 30px;
   margin-bottom: 0;
@@ -272,7 +247,7 @@ img {
 /* О компании */
 
 .container.company {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .company-list {
@@ -289,8 +264,6 @@ img {
 }
 
 .container.team-cont {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-list {
@@ -333,10 +306,13 @@ img {
 /* Footer */
 
 .page-footer {
-  padding: 60px 0;
-
   background-color: var(--footer-bg-color);
   color: var(--primary-white-color);
+}
+
+.container.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .bottom {
@@ -363,8 +339,6 @@ img {
 
 .address-list .link {
   color: var(--bottom-link-color);
-
-  text-decoration: none;
 }
 
 .address-list .link:hover,
@@ -379,8 +353,6 @@ img {
 }
 
 .container.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .filter-list {
@@ -436,7 +408,6 @@ img {
 }
 
 .project-list .link {
-  text-decoration: none;
 }
 
 .project-list .name {
