@@ -400,6 +400,7 @@ img {
 }
 
 .bottom {
+  margin: 0;
   color: var(--primary-white-color);
 }
 
