@@ -86,7 +86,6 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  font-style: normal;
 }
 
 .logo .accent {
@@ -104,10 +103,8 @@ img {
   color: var(--primary-title-color);
 
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
 .nav-list .link:hover,
@@ -312,8 +309,6 @@ img {
   margin-top: 10px;
 
   color: var(--primary-text-color);
-
-  font-weight: 400;
 }
 
 .social-networks {
@@ -414,14 +409,8 @@ img {
 
 .address-list .link {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 
   color: var(--bottom-link-color);
-
-  text-decoration: none;
 }
 
 .address-list .destination.link {
@@ -439,9 +428,7 @@ img {
 
 .subscribe-box .title {
   font-weight: bold;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -497,7 +484,6 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  letter-spacing: 0.03em;
 }
 
 .filter-list .item:not(:last-child) {
@@ -564,7 +550,6 @@ img {
 
   color: var(--primary-text-color);
 
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
 }
