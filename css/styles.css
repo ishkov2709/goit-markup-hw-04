@@ -408,21 +408,24 @@ img {
   margin-bottom: 0;
 }
 
-.address-list .text,
+.address-list .item:nth-child(n + 2) {
+  margin-top: 9px;
+}
+
 .address-list .link {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
 
-.address-list .item:nth-child(n + 2) {
-  margin-top: 9px;
-}
-
-.address-list .link {
   color: var(--bottom-link-color);
+
+  text-decoration: none;
+}
+
+.address-list .destination.link {
+  color: var(--primary-white-color);
 }
 
 .address-list .link:hover,
