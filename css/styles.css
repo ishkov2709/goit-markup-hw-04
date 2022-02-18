@@ -38,8 +38,6 @@ img {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
   margin: 0 auto;
 }
 
@@ -160,7 +158,7 @@ img {
 
 .hero-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
   color: var(--primary-white-color);
 
@@ -181,7 +179,6 @@ img {
 }
 
 .hero .button {
-  margin-top: 30px;
   padding: 10px 32px;
 
   background-color: var(--accent-color);
@@ -196,7 +193,12 @@ img {
 
 /* Преимущества компании */
 
-.container.main-cont {
+.section.features,
+.section.team,
+.section.portfolio,
+.section.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .title {
@@ -221,6 +223,8 @@ img {
   display: flex;
   justify-content: center;
   height: 120px;
+  margin-bottom: 30px;
+
   background-color: var(--alternative-bg-color);
   border-radius: 4px;
 }
@@ -231,16 +235,22 @@ img {
 
 .feature-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .feature-list .item {
   width: 270px;
 }
 
+.feature-list .item:not(:last-child),
+.company-list .item:not(:last-child),
+.team-list > .item:not(:last-child),
+.client-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .feature-list .subtitle {
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   color: var(--primary-title-color);
 
@@ -251,20 +261,24 @@ img {
 }
 
 .feature-list .text {
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* О компании */
 
 .container.company {
-  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+.container.company .title,
+.container.team-cont .title,
+.filter-list,
+.section.clients .title {
+  margin-bottom: 50px;
 }
 
 .company-list {
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
 }
 
 /* Команда */
@@ -278,11 +292,10 @@ img {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
 }
 
 .team-list > .item {
+  flex-basis: calc((100% - 90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -300,25 +313,23 @@ img {
 }
 
 .name {
+  margin: 0 0 10px 0;
   font-weight: 500;
 }
 
-.name,
 .profession {
-  margin: 0;
-}
-
-.profession {
-  margin-top: 10px;
+  margin: 0 0 16px 0;
 
   color: var(--primary-text-color);
 }
 
 .social-networks {
-  margin-top: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.social-networks .item:not(:last-child),
+.subscribe-list .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-networks .site-logo {
@@ -346,9 +357,6 @@ img {
 
 .client-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
 }
 
 .client-icon {
@@ -378,6 +386,8 @@ img {
 /* Footer */
 
 .page-footer {
+  padding: 60px 0;
+
   background-color: var(--footer-bg-color);
   color: var(--primary-white-color);
 }
@@ -385,8 +395,6 @@ img {
 .container.footer {
   display: flex;
   align-items: baseline;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .address-box {
@@ -399,15 +407,17 @@ img {
 
 .bottom {
   margin: 0;
+
   color: var(--primary-white-color);
 }
 
 .address-list {
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
-.address-list .item:nth-child(n + 2) {
-  margin-top: 9px;
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-list .link {
@@ -426,10 +436,12 @@ img {
 }
 
 .subscribe-box {
-  width: 206px;
+  min-width: 206px;
 }
 
 .subscribe-box .title {
+  margin-bottom: 20px;
+
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
@@ -437,9 +449,7 @@ img {
 
 .subscribe-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
 }
 
 .subscribe-icon {
@@ -506,13 +516,16 @@ img {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
-  margin-top: 34px;
 }
 
 .project-list .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.project-list .item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .project-list .item:nth-last-child(-n + 3) {
